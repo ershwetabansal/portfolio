@@ -1,0 +1,15 @@
+{
+  "name": "my_prfile",
+  "version": "1.0.0",
+  "main": "",
+  "dependencies": {
+    "jquery": "~1.8.3",
+    "jquery.scrollTo": "~1.4.6",
+    "jquery.serialScroll": "*"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ]
+}
