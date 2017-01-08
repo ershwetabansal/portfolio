@@ -100,10 +100,10 @@ export default {
     title : 'Full stack developer',
     profile_image : '/images/shweta_profile.jpg',
     headers : {
-        'About' : '#about-me',
-        'Skills' : '#skills',
-        'Portfolio' : '#portfolio',
-        'Contact' : '#contact-me',
+        'About' : '/about',
+        'Skills' : '/skills',
+        'Portfolio' : '/portfolio',
+        'Contact' : '/contact',
         'Resume' : '/resume.html'
     },
     intro: [

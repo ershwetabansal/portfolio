@@ -1,0 +1,42 @@
+h1 {
+  font-size: 2em;
+  font-weight: 300; }
+
+h2 {
+  font-size: 1.7em;
+  font-weight: 300; }
+
+#navbar {
+  position: relative;
+  color: white;
+  background: black;
+  padding: 2em 1em;
+  text-align: center; }
+  @media (min-width: 768px) {
+    #navbar {
+      position: fixed;
+      width: 34%;
+      height: 100vh;
+      left: 0;
+      top: 0; } }
+
+#content {
+  padding-left: 34%;
+  overflow-x: hidden; }
+
+.profile-image {
+  width: 150px;
+  margin: 0 auto; }
+  .profile-image img, .profile-imageimg {
+    width: 150px;
+    border: 3px solid #afadad;
+    padding: 2px;
+    border-radius: 50%; }
+
+.sticked-to-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0; }
+
+.full-width {
+  width: 100%; }

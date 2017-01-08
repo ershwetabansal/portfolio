@@ -7,144 +7,50 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="css/app.css" rel="stylesheet">
+    <link href="css/portfolio.css" rel="stylesheet">
 </head>
 <body>
 
 <div id="app" v-cloak>
-    <header id="header" class="navbar navbar-fixed">
-        <div class="navbar-inner">
-            <ul class="nav nav-pills">
-                <li class="pull-left">
-                    <a href="#app">
-                        <h1 style="margin-top: 0;" class="text-left">
-                            <span>{{ data.name }}</span>
-                            <span class="job-title">{{ data.title }}</span>
-                        </h1>
-                    </a>
 
-                </li>
-                <li v-for="(href, title) in data.headers">
-                    <a :href="href">{{ title }}</a>
-                </li>
-            </ul>
+    <div id="navbar" >
+        <div class="profile-image">
+            <img :src="data.profile_image" :alt="data.name" width="150" />
         </div>
-    </header>
+        <h1>{{ data.name }}</h1>
+        <h2>{{ data.title }}</h2>
+        <ul class="list-unstyled">
+            <li v-for="(href, title) in data.headers">
+                <router-link :to="href">{{ title }}</router-link>
+            </li>
+        </ul>
+        <ul class="list-inline sticked-to-bottom full-width text-center">
+            <li>
+                <a href="mailto:ershwetabansal@gmail.com">
+                    <i class="fa fa-envelope-o"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/shweta_bansal" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/ershwetabansal" target="_blank">
+                    <i class="fa fa-github"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/shweta-bansal-26a91216" target="_blank">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div id="content">
+        <router-view :data="data"></router-view>
+    </div>
 
-    <section id="intro">
-        <div class="vcenter">
-            <ul class="intro_list">
-                <li v-for="item in data.intro">{{ item }}</li>
-            </ul>
-            <a href="#about-me" style="font-size: 2em;margin-top: 4em; display: inline-block;">
-                <i class="fa fa-angle-down"></i>
-            </a>
-        </div>
-    </section>
-
-    <section id="about-me">
-        <div class="row">
-            <div class="col-sm-8 col-sm-offset-2">
-                <p class="hero clearfix" v-for="(about, index) in data.about">
-                    <img :src="data.profile_image" alt="" width="150" class="profile pull-left" v-if="index == 0">
-                    {{ about }}
-                </p>
-                <p class="hero">
-                    Feel free to approach me if you are looking for someone with <a href="#skills">these skills</a>.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills">
-        <div class="row">
-            <div class="col-sm-6 col-sm-offset-3">
-                <ul class="list-unstyled list-skills">
-                    <li v-for="(skillset, skillName) in data.skills">
-                        <h3>{{ skillName }}</h3>
-                        <ul class="list-unstyled">
-                            <li v-for="skill in skillset">{{ skill }}</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="portfolio">
-
-        <p style="font-size: 17px;" v-for="line in data.portfolio_paragraph">
-            {{ line }}
-        </p>
-        <div class="dock-container">
-            <div class="dock">
-                <ul class="list-inline list-projects">
-                    <li>
-                        <img src="/images/portfolio/energy_aspects.png" data-key="energy_aspects"/>
-                    </li>
-                    <li>
-                        <img src="/images/portfolio/ea_mobile.png" data-key="energy_aspects"/>
-                    </li>
-                    <li>
-                        <img src="/images/portfolio/e-mail-design.png" data-key="ea_email"/>
-                    </li>
-                    <li>
-                        <img src="/images/portfolio/publisher.png" data-key="publisher"/>
-                    </li>
-                    <li>
-                        <img src="/images/portfolio/hr_talent.png" data-key="hr_talent"/>
-                    </li>
-                    <li>
-                        <img src="/images/portfolio/hr_talent_2.png" data-key="hr_talent"/>
-                    </li>
-                    <li>
-                        <img src="/images/portfolio/dubal_1.png" data-key="dubal"/>
-                    </li>
-                    <li>
-                        <img src="/images/portfolio/dubal_2.png" data-key="dubal"/>
-                    </li>
-                    <li>
-                        <img src="/images/portfolio/dubal_3.png" data-key="dubal"/>
-                    </li>
-                    <li>
-                        <img src="/images/portfolio/approval_app.png" data-key="approval_app"/>
-                    </li>
-                </ul>
-                <div class="dock-base"></div>
-            </div>
-        </div>
-    </section> <!--#fifth-->
-
-    <footer>
-        <div id="contact-me">
-            <ul class="list-inline list-footer-items text-center">
-                <li>
-                    <a href="https://twitter.com/shweta_bansal" target="_blank">
-                        <i class="fa fa-twitter"></i>
-                        <div>Follow me</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/ershwetabansal" target="_blank">
-                        <i class="fa fa-github"></i>
-                        <div>View on GitHub</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/shweta-bansal-26a91216" target="_blank">
-                        <i class="fa fa-linkedin"></i>
-                        <div>View my Linkedin profile</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:ershwetabansal@gmail.com">
-                        <i class="fa fa-envelope-o"></i>
-                        <div>E-mail me</div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </footer>
 </div>
 
     <div class="modal fade" tabindex="-1" role="dialog" id="modal">
@@ -161,93 +67,88 @@
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
-    <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="/js/portfolio.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js" ></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
 
 <script>
-    (function() {
-        var positions = {
-            home : {
-                top : $('#intro').offset().top - 150,
-                bottom: $('#intro').offset().top + $('#intro').height() - 150,
-                tab : $('#home-tab')
-            },
-            about : {
-                top : $('#about-me').offset().top  - 150,
-                bottom: $('#about-me').offset().top + $('#about-me').height() - 150,
-                tab : $('#about-tab')
-            },
-            skills : {
-                top : $('#skills').offset().top  - 150,
-                bottom: $('#skills').offset().top + $('#skills').height()  - 150,
-                tab : $('#skills-tab')
-            },
-            portfolio : {
-                top : $('#portfolio').offset().top - 150,
-                bottom: $('#portfolio').offset().top + $('#portfolio').height() -150,
-                tab : $('#portfolio-tab')
-            },
-            contact : {
-                top : $('#contact-me').offset().top - 220,
-                bottom: $('#contact-me').offset().top + $('#contact-me').height(),
-                tab : $('#contact-tab')
-            }
-        };
-
-        fixHeader($(this).scrollTop());
-        $(window).scroll(function() {
-            var top = $(this).scrollTop();
-            fixHeader(top);
-        });
-
-        function fixHeader(top) {
-            if (top > 100) {
-                $('#header').addClass('shadow');
-            } else {
-                $('#header').removeClass('shadow');
-            }
-
-            for (var tab in positions){
-                if (top >= positions[tab].top && top < 
-                    (positions[tab].bottom)) {
-                    positions[tab].tab.addClass('active');
-                } else {
-                    positions[tab].tab.removeClass('active');
-                }
-            }
-        }
-
-        var details = {
-            energy_aspects : {
-                about_project : ""
-            },
-            ea_email : {
-                about_project : ""
-            },
-            publisher : {
-                about_project : ""
-            },
-            dubal : {
-                about_project : ""
-            },
-            hr_talent : {
-                about_project : ""
-            },
-            approval_app : {
-                about_project : ""
-            }
-        };
-
-        $('.list-projects').find('li > img').click(function() {
-            $('#modal').find('img').attr('src', $(this).attr('src'));
-            $('#modal').modal({show: true});
-        });
-
-    })();
+//    (function() {
+//        var positions = {
+//            home : {
+//                top : $('#intro').offset().top - 150,
+//                bottom: $('#intro').offset().top + $('#intro').height() - 150,
+//                tab : $('#home-tab')
+//            },
+//            about : {
+//                top : $('#about-me').offset().top  - 150,
+//                bottom: $('#about-me').offset().top + $('#about-me').height() - 150,
+//                tab : $('#about-tab')
+//            },
+//            skills : {
+//                top : $('#skills').offset().top  - 150,
+//                bottom: $('#skills').offset().top + $('#skills').height()  - 150,
+//                tab : $('#skills-tab')
+//            },
+//            portfolio : {
+//                top : $('#portfolio').offset().top - 150,
+//                bottom: $('#portfolio').offset().top + $('#portfolio').height() -150,
+//                tab : $('#portfolio-tab')
+//            },
+//            contact : {
+//                top : $('#contact-me').offset().top - 220,
+//                bottom: $('#contact-me').offset().top + $('#contact-me').height(),
+//                tab : $('#contact-tab')
+//            }
+//        };
+//
+//        fixHeader($(this).scrollTop());
+//        $(window).scroll(function() {
+//            var top = $(this).scrollTop();
+//            fixHeader(top);
+//        });
+//
+//        function fixHeader(top) {
+//            if (top > 100) {
+//                $('#header').addClass('shadow');
+//            } else {
+//                $('#header').removeClass('shadow');
+//            }
+//
+//            for (var tab in positions){
+//                if (top >= positions[tab].top && top <
+//                    (positions[tab].bottom)) {
+//                    positions[tab].tab.addClass('active');
+//                } else {
+//                    positions[tab].tab.removeClass('active');
+//                }
+//            }
+//        }
+//
+//        var details = {
+//            energy_aspects : {
+//                about_project : ""
+//            },
+//            ea_email : {
+//                about_project : ""
+//            },
+//            publisher : {
+//                about_project : ""
+//            },
+//            dubal : {
+//                about_project : ""
+//            },
+//            hr_talent : {
+//                about_project : ""
+//            },
+//            approval_app : {
+//                about_project : ""
+//            }
+//        };
+//
+//        $('.list-projects').find('li > img').click(function() {
+//            $('#modal').find('img').attr('src', $(this).attr('src'));
+//            $('#modal').modal({show: true});
+//        });
+//
+//    })();
 </script>
 </body>
 </html>
