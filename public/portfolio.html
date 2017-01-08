@@ -11,108 +11,70 @@
 </head>
 <body>
 
-<div id="app">
-    <portfolio-header></portfolio-header>
+<div id="app" v-cloak>
+    <header id="header" class="navbar navbar-fixed">
+        <div class="navbar-inner">
+            <ul class="nav nav-pills">
+                <li class="pull-left">
+                    <a href="#app">
+                        <h1 style="margin-top: 0;" class="text-left">
+                            <span>{{ data.name }}</span>
+                            <span class="job-title">{{ data.title }}</span>
+                        </h1>
+                    </a>
 
-    <div id="intro">
+                </li>
+                <li v-for="(href, title) in data.headers">
+                    <a :href="href">{{ title }}</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="intro">
         <div class="vcenter">
             <ul class="intro_list">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Design</li>
-                <li>Web performance</li>
-                <li>Laravel PHP</li>
-                <li>Node JS / Express JS</li>
+                <li v-for="item in data.intro">{{ item }}</li>
             </ul>
             <a href="#about-me" style="font-size: 2em;margin-top: 4em; display: inline-block;">
                 <i class="fa fa-angle-down"></i>
             </a>
-        </div> <!--.story-->
-    </div> <!--#intro-->
+        </div>
+    </section>
 
-    <div id="about-me">
+    <section id="about-me">
         <div class="row">
             <div class="col-sm-8 col-sm-offset-2">
-                <p class="hero clearfix">
-                    <img src="/images/shweta_profile.jpg" alt="" width="150" class="profile pull-left">
-                    I am a full stack developer with wide experience in front end and back end technologies. I am looking forward to developing and exercising years of knowledge on challenging projects and applications. I have a problem solving approach and appreciates clean and readable code. I am always enthusiastic for learning new technologies and frameworks.
+                <p class="hero clearfix" v-for="(about, index) in data.about">
+                    <img :src="data.profile_image" alt="" width="150" class="profile pull-left" v-if="index == 0">
+                    {{ about }}
                 </p>
-
-                <p class="hero">
-                    I use test driven approach for front end as well as back end development which helps in better code quality and faster development. This makes my projects well documented and maintainable.
-                </p>
-
-                <p class="hero">
-                    My front-end build process involves the use of tools such as Sass, Gulp, Bower, and NPM to speed up development.
-                </p>
-
                 <p class="hero">
                     Feel free to approach me if you are looking for someone with <a href="#skills">these skills</a>.
                 </p>
-
             </div>
         </div>
-    </div> <!--#second-->
+    </section>
 
-    <div id="skills">
+    <section id="skills">
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
                 <ul class="list-unstyled list-skills">
-                    <li>
-                        <h3>Front End</h3>
+                    <li v-for="(skillset, skillName) in data.skills">
+                        <h3>{{ skillName }}</h3>
                         <ul class="list-unstyled">
-                            <li>Javascript, jQuery, AJAX, HTML5, CSS3, Sass</li>
-                            <li><strong>Frameworks -</strong> Angular, Bootstrap</li>
-                            <li><strong>Build tools -</strong> bower, gulp/elixir, npm, yarn, protrator(e2e)</li>
-                            <li><strong>Testing -</strong> Jasmine, Karma</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h3>Server side</h3>
-                        <ul class="list-unstyled">
-                            <li>Laravel PHP, Eloquent, Blades</li>
-                            <li>Node, Express js</li>
-                            <li>Enterprise JAVA</li>
-                            <li><strong>Testing -</strong>phpunit, junit</li>
-                        </ul>
-                    </li>
-                    <li>
-
-                        <h3>Tools</h3>
-                        <ul class="list-unstyled">
-                            <li><strong>Project management -</strong> Jira, Rally, Basecamp</li>
-                            <li><strong>Source control - </strong> Git, SVN</li>
-                            <li><strong>Browser testing -</strong> Browserstack</li>
-                            <li><strong>E-mail testing -</strong> Litmus</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h3>Methodologies</h3>
-                        <ul class="list-unstyled">
-                            <li>Test driven development</li>
-                            <li>Focus on website performance</li>
-                            <li>Responsive web design</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h3>Other</h3>
-                        <ul>
-                            <li>E-mail design and development</li>
+                            <li v-for="skill in skillset">{{ skill }}</li>
                         </ul>
                     </li>
                 </ul>
             </div>
         </div>
-    </div> <!--#third-->
+    </section>
 
-    <div id="portfolio">
+    <section id="portfolio">
 
-        <p style="font-size: 17px;">
-            I have developed various projects in my career which diversify from websites to B2E web applications to hybrid mobile applications.
-        </p>
-        <p style="font-size: 17px;">
-            Here are some of the snapshots of my work.
+        <p style="font-size: 17px;" v-for="line in data.portfolio_paragraph">
+            {{ line }}
         </p>
         <div class="dock-container">
             <div class="dock">
@@ -151,9 +113,38 @@
                 <div class="dock-base"></div>
             </div>
         </div>
-    </div> <!--#fifth-->
+    </section> <!--#fifth-->
 
-    <portfolio-footer id="contact-me"></portfolio-footer>
+    <footer>
+        <div id="contact-me">
+            <ul class="list-inline list-footer-items text-center">
+                <li>
+                    <a href="https://twitter.com/shweta_bansal" target="_blank">
+                        <i class="fa fa-twitter"></i>
+                        <div>Follow me</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/ershwetabansal" target="_blank">
+                        <i class="fa fa-github"></i>
+                        <div>View on GitHub</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/shweta-bansal-26a91216" target="_blank">
+                        <i class="fa fa-linkedin"></i>
+                        <div>View my Linkedin profile</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:ershwetabansal@gmail.com">
+                        <i class="fa fa-envelope-o"></i>
+                        <div>E-mail me</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
 </div>
 
     <div class="modal fade" tabindex="-1" role="dialog" id="modal">

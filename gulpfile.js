@@ -43,10 +43,6 @@ gulp.task('default', function (callback) {
 });
 
 gulp.task('watch', function(){
-    gulp.watch('src/sass/**', ['sass']);
-});
-
-
-gulp.task('watch', function(){
     gulp.watch('src/js/**', ['portfolio']);
+    gulp.watch('src/sass/**', ['sass']);
 });

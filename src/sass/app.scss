@@ -9,6 +9,7 @@ body.resume {
 	padding: 4em;
 }
 
+
 $branding-color: #425370;
 
 .job-title {
@@ -73,53 +74,6 @@ header {
 
 	}
 }
-
-section {
-	h2 {
-		border-bottom: 1px solid $branding-color;
-		padding-bottom: 14px;
-		color: lighten($branding-color, 20%);
-		font-size: 25px;
-	}
-
-	ul.list-bullets {
-		list-style: none;
-		padding:0;
-		margin:0;
-		margin-bottom: 25px;
-
-		li {
-			padding-left: 1em;
-			text-indent: -.7em;
-			margin-bottom: 7px;
-    		line-height: 22px;
-		}
-
-		li:before {
-			content: "• ";
-			color: $branding-color; /* or whatever color you prefer */
-		}
-	}
-
-	h3 {
-		font-size: 20px;
-		margin-bottom: 3px;
-
-	}
-
-	p {
-		color: #909090;
-	}
-
-	h4 {
-		font-size: 16px;
-	}
-
-	.hero {
-		font-size: 19px;
-	}
-}
-
 
 #intro {
 	background: $branding-color;
@@ -200,6 +154,7 @@ section {
 	margin-top: -10px;
 	color: #a29e9e;
 	padding: 1em;
+	height: 30vh;
 }
 
 .column-half {
@@ -318,12 +273,22 @@ h1.hero {
 .list-footer-items {
 	li {
 		font-size: 1.5em;
-	    margin-bottom: 10px;
+		margin-right: 3em;
+		&:last-of-type {
+			margin-right: 0;
+		}
 	    a {
 		    padding: 10px 18px 0 0;
 	    	display: inline-block;
 	    	color: white;
+			&:hover, &:focus, &:active {
+				text-decoration: none;
+			}
 	    }
+		div {
+			font-size: 0.8em;
+			color: #a29d9d;
+		}
 	    &:hover, &:focus, &:active {
 	    	a {
 	    		color: white;
