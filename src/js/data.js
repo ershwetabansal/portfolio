@@ -9,7 +9,7 @@ let skills = {
         '<span>Full integration of front-end development using <strong>Gulp</strong>.</span>',
         '<span><strong>Jasmine</strong> and <strong>Karma</strong> are the best friends for setting up unit tests.</span>',
         '<span>For e2e testing, I started with <strong>Protractor</strong> in Angular JS and now I use the same for non-angular applications too.</span>',
-        `<span>I have an hands-on of mobile application development using <strong>Apache Cordova</strong> for a quick application 
+        `<span>I have hands-on of mobile application development using <strong>Apache Cordova</strong> for a quick application 
         creation across multiple platforms.</span>`,
         `<span>Getting good at <strong>photoshop</strong> for designing skills.</span>`
     ],
