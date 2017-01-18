@@ -6,149 +6,46 @@
     <meta name="viewport" content="initial-scale = 1.0" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
     <link href="css/portfolio.css" rel="stylesheet">
 </head>
 <body>
 
 <div id="app" v-cloak>
-
-    <div id="navbar" >
-        <div class="profile-image">
-            <img :src="data.profile_image" :alt="data.name" width="150" />
+    <div class="sidebar">
+        <img src="/images/background.jpg" alt="background">
+        <div class="overlay"></div>
+        <div id="navbar">
+            <div class="profile-image">
+                <img :src="data.profile_image" :alt="data.name" width="150" />
+            </div>
+            <h1>{{ data.name }}</h1>
+            <h3>{{ data.title }}</h3>
+            <ul class="list-unstyled list-navigation">
+                <li v-for="(href, title) in data.headers">
+                    <router-link :to="href">{{ title }}</router-link>
+                </li>
+            </ul>
+            <ul class="list-inline sticked-to-bottom full-width list-social-links">
+                <li v-for="contact in data.contacts">
+                    <a :href="contact.link">
+                        <i class="fa" :class="contact.class"></i>
+                    </a>
+                </li>
+            </ul>
         </div>
-        <h1>{{ data.name }}</h1>
-        <h2>{{ data.title }}</h2>
-        <ul class="list-unstyled">
-            <li v-for="(href, title) in data.headers">
-                <router-link :to="href">{{ title }}</router-link>
-            </li>
-        </ul>
-        <ul class="list-inline sticked-to-bottom full-width text-center">
-            <li>
-                <a href="mailto:ershwetabansal@gmail.com">
-                    <i class="fa fa-envelope-o"></i>
-                </a>
-            </li>
-            <li>
-                <a href="https://twitter.com/shweta_bansal" target="_blank">
-                    <i class="fa fa-twitter"></i>
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/ershwetabansal" target="_blank">
-                    <i class="fa fa-github"></i>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/shweta-bansal-26a91216" target="_blank">
-                    <i class="fa fa-linkedin"></i>
-                </a>
-            </li>
-        </ul>
     </div>
+
     <div id="content">
-        <router-view :data="data"></router-view>
+        <div>
+            <router-view :data="data"></router-view>
+        </div>
     </div>
 
 </div>
 
-    <div class="modal fade" tabindex="-1" role="dialog" id="modal">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="row">
-                    <div class="col-sm-9">
-                        <img src="">
-                    </div>
-                    <div class="col-sm-3">
-                        <p id="about_project"></p>
-                    </div>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-    <script src="/js/portfolio.js"></script>
-
-<script>
-//    (function() {
-//        var positions = {
-//            home : {
-//                top : $('#intro').offset().top - 150,
-//                bottom: $('#intro').offset().top + $('#intro').height() - 150,
-//                tab : $('#home-tab')
-//            },
-//            about : {
-//                top : $('#about-me').offset().top  - 150,
-//                bottom: $('#about-me').offset().top + $('#about-me').height() - 150,
-//                tab : $('#about-tab')
-//            },
-//            skills : {
-//                top : $('#skills').offset().top  - 150,
-//                bottom: $('#skills').offset().top + $('#skills').height()  - 150,
-//                tab : $('#skills-tab')
-//            },
-//            portfolio : {
-//                top : $('#portfolio').offset().top - 150,
-//                bottom: $('#portfolio').offset().top + $('#portfolio').height() -150,
-//                tab : $('#portfolio-tab')
-//            },
-//            contact : {
-//                top : $('#contact-me').offset().top - 220,
-//                bottom: $('#contact-me').offset().top + $('#contact-me').height(),
-//                tab : $('#contact-tab')
-//            }
-//        };
-//
-//        fixHeader($(this).scrollTop());
-//        $(window).scroll(function() {
-//            var top = $(this).scrollTop();
-//            fixHeader(top);
-//        });
-//
-//        function fixHeader(top) {
-//            if (top > 100) {
-//                $('#header').addClass('shadow');
-//            } else {
-//                $('#header').removeClass('shadow');
-//            }
-//
-//            for (var tab in positions){
-//                if (top >= positions[tab].top && top <
-//                    (positions[tab].bottom)) {
-//                    positions[tab].tab.addClass('active');
-//                } else {
-//                    positions[tab].tab.removeClass('active');
-//                }
-//            }
-//        }
-//
-//        var details = {
-//            energy_aspects : {
-//                about_project : ""
-//            },
-//            ea_email : {
-//                about_project : ""
-//            },
-//            publisher : {
-//                about_project : ""
-//            },
-//            dubal : {
-//                about_project : ""
-//            },
-//            hr_talent : {
-//                about_project : ""
-//            },
-//            approval_app : {
-//                about_project : ""
-//            }
-//        };
-//
-//        $('.list-projects').find('li > img').click(function() {
-//            $('#modal').find('img').attr('src', $(this).attr('src'));
-//            $('#modal').modal({show: true});
-//        });
-//
-//    })();
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+<script src="/js/portfolio.js"></script>
 </body>
 </html>

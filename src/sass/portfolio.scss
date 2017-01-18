@@ -1,45 +1,110 @@
-$sidebar-width : 34%;
+$sidebar-width : 25%;
 $sidebar-background: black;
 $sidebar-text-color: white;
-
+$text-color: #a9a4a4;
+body {
+  font: 16px/1.6 Roboto,Helvetica,sans-serif;
+  font-weight: 300;
+}
 
 h1 {
-  font-size: 2em;
-  font-weight: 300;
+  font-size: 1.8em;
+  text-transform: uppercase;
+  margin-top: 0;
 }
 
 h2 {
-  font-size: 1.7em;
-  font-weight: 300;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin-top: 0;
 }
 
-#navbar {
+h3 {
+  font-size: 1.1em;
+  text-transform: uppercase;
+  margin-top: 0;
 
+}
+.overlay {
+  background: black;
+  opacity: 0.7;
+}
+
+.sidebar {
   position: relative;
-
   color: $sidebar-text-color;
-  background: $sidebar-background;
-  padding: 2em 1em;
   text-align: center;
+  h3 {
+    color: #a9a4a4;
+  }
+  #navbar, .overlay {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
+  #navbar {
+    padding-top: 2em;
+  }
+  @media (max-width: 767px) {
+    .profile-image {
+      display: none;
+    }
+    .list-navigation {
+      li {
+        display: inline-block;
+        padding-right: 20px;
+      }
+    }
+  }
   @media (min-width:768px) {
+    > img {
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
     position: fixed;
+    padding: 2em 1em;
     width: $sidebar-width;
     height: 100vh;
     left: 0;
     top: 0;
+    overflow-x: hidden;
   }
 }
 
+.sidebar-background {
+  background-color: rgba(145,13,13,.8);
+}
+
+div#navbar::before {
+  background: url('/images/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.6;
+}
+
 #content {
-  padding-left: $sidebar-width;
+  @media (min-width: 768px) {
+    background: #fafafa;
+    padding-left: $sidebar-width;
+    min-height: 100vh;
+  }
   overflow-x: hidden;
+  > div {
+    padding: 3em;
+  }
 }
 
 .profile-image {
   width: 150px;
   margin: 0 auto;
-
+  margin-bottom: 2em;
   img, &img {
     width: 150px;
     border: 3px solid #afadad;
@@ -56,4 +121,141 @@ h2 {
 
 .full-width {
   width: 100%;
+}
+
+.list-navigation {
+  margin-top: 3em;
+  text-align: left;
+  padding-left: 2em;
+  li {
+    margin-bottom: 1em;
+    position: relative;
+    a {
+      color: #a9a4a4;
+      text-decoration: none;
+      &:hover, &:focus, &:active, &.router-link-active {
+        color: $sidebar-text-color;
+      }
+      &.router-link-active {
+        &::before {
+          content: " \f105 ";
+          padding-right: 1em;
+          font-family: FontAwesome;
+        }
+        &::after {
+          content: " ";
+          display: block;
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-top: 9px solid transparent;
+          border-bottom: 9px solid transparent;
+          border-right: 8px solid #fff;
+          bottom: 6px;
+          left: auto;
+          right: 0;
+        }
+      }
+    }
+  }
+}
+
+.list-social-links {
+  text-align: left;
+  padding-left: 2em;
+  li {
+    a {
+      font-size: 1.5em;
+      color: #a9a4a4;
+      &:hover {
+        color: white;
+      }
+    }
+
+  }
+}
+
+#portfolio {
+  position: relative;
+  div.clearfix {
+    border-bottom: 1px solid #dcd8d8;
+    padding-bottom: 1em;
+    margin-bottom: 2em;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+}
+
+.images {
+  text-align: center;
+  img {
+    max-width: 100%;
+    margin-bottom: 3em;
+    border: 1px solid #efecec;
+    margin-right: 1em;
+  }
+}
+
+.project-details {
+  margin-top: 2em;
+  margin-bottom: 4em;
+}
+
+.list-tech-tags {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: 0;
+  li {
+    background-color: rgba(10, 98, 142, 0.8);
+    margin-bottom: 6px;
+    color: #FFF;
+    padding: 4px 10px;
+    font-size: 13px;
+    margin-right: 6px;
+    text-transform: uppercase;
+  }
+}
+
+.link {
+  color: $text-color;
+}
+
+.list-skills {
+  margin-top: 2em;
+  > li {
+    margin-bottom: 3em;
+    ul {
+      list-style-type: disc;
+      li {
+        line-height: 35px;
+      }
+    }
+  }
+  strong {
+    color: rgba(10, 98, 142, 0.8);
+  }
+
+  h3 {
+    color: rgba(4, 51, 74, 0.8);
+    margin-bottom: 20px;
+  }
+}
+
+.more {
+  display: none;
+}
+
+.less {
+  display: inline;
+}
+.collapsed {
+  .more {
+    display: inline;
+  }
+  .less {
+    display: none;
+  }
+
 }
