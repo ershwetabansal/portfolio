@@ -1,6 +1,5 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var runSequence = require('run-sequence');
 var webpack = require('webpack-stream');
