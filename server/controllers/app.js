@@ -20,13 +20,14 @@ app.set('view engine', 'html');
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, '../../public')));
 
+app.get('/', function(req,res){
+    res.render('portfolio.html', {});
+});
+
 app.get('/r-e-s-u-m-e', function(req,res){
   res.render('r-e-s-u-m-e', {});
 });
 
-app.get('/portfolio', function(req,res){
-  res.render('portfolio.html', {});
-});
 
 app.get('/*');
 
