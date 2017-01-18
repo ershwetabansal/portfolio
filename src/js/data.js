@@ -4,10 +4,9 @@ let skills = {
          <strong>Bootstrap JS</strong>.</span>`,
         `<span>Used <strong>VUE js</strong> in this porfolio website and using the same in my next venture.</span>`,
         '<span>Can efficiently work with <strong>jQuery</strong> to create a quick working widgets.</span>',
-        `<span>Nevertheless <strong>HTML5</strong> and <strong>CSS3</strong> are the basics and in love with 
+        `<span>Nevertheless <strong>HTML5</strong> and <strong>CSS3</strong> and in love with 
         <strong>Sass</strong> for better management of styles.</span>`,
         '<span>Full integration of front-end development using <strong>Gulp</strong>.</span>',
-        '<span>Very much aware of the basic tools to ease the development - <strong>bower/npm/yarn</strong></span>',
         '<span><strong>Jasmine</strong> and <strong>Karma</strong> are the best friends for setting up unit tests.</span>',
         '<span>For e2e testing, I started with <strong>Protractor</strong> in Angular JS and now I use the same for non-angular applications too.</span>',
         `<span>I have an hands-on of mobile application development using <strong>Apache Cordova</strong> for a quick application 
