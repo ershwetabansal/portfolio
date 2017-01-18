@@ -87,7 +87,10 @@
 	    data: {
 	        data: _data2.default
 	    },
-	    router: router
+	    router: router,
+	    components: {
+	        sidebar: __webpack_require__(15)
+	    }
 	});
 
 /***/ },
@@ -11482,6 +11485,118 @@
 	  module.hot.accept()
 	  if (module.hot.data) {
 	     require("vue-hot-reload-api").rerender("data-v-d0735dbe", module.exports)
+	  }
+	}
+
+/***/ },
+/* 15 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+
+	/* script */
+	__vue_exports__ = __webpack_require__(16)
+
+	/* template */
+	var __vue_template__ = __webpack_require__(17)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/Shwetabansal/Code/Portfolio/src/js/components/Sidebar.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-3f763b86", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-3f763b86", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] Sidebar.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 16 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = {
+	    props: ['data']
+	};
+
+/***/ },
+/* 17 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
+	    staticClass: "sidebar"
+	  }, [_c('img', {
+	    attrs: {
+	      "src": "/images/background.jpg",
+	      "alt": "background"
+	    }
+	  }), _vm._v(" "), _c('div', {
+	    staticClass: "overlay"
+	  }), _vm._v(" "), _c('div', {
+	    attrs: {
+	      "id": "navbar"
+	    }
+	  }, [_c('div', {
+	    staticClass: "profile-image"
+	  }, [_c('img', {
+	    attrs: {
+	      "src": _vm.data.profile_image,
+	      "alt": _vm.data.name,
+	      "width": "150"
+	    }
+	  })]), _vm._v(" "), _c('h1', {}, [_vm._v(_vm._s(_vm.data.name))]), _vm._v(" "), _c('h3', {}, [_vm._v(_vm._s(_vm.data.title))]), _vm._v(" "), _c('ul', {
+	    staticClass: "list-unstyled list-navigation"
+	  }, _vm._l((_vm.data.headers), function(href, title) {
+	    return _c('li', [_c('router-link', {
+	      attrs: {
+	        "to": href
+	      }
+	    }, [_vm._v(_vm._s(title))])], 1)
+	  })), _vm._v(" "), _c('ul', {
+	    staticClass: "list-inline sticked-to-bottom full-width list-social-links"
+	  }, _vm._l((_vm.data.contacts), function(contact) {
+	    return _c('li', [_c('a', {
+	      attrs: {
+	        "href": contact.link
+	      }
+	    }, [_c('i', {
+	      staticClass: "fa",
+	      class: contact.class
+	    })])])
+	  }))])])
+	},staticRenderFns: []}
+	module.exports.render._withStripped = true
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-3f763b86", module.exports)
 	  }
 	}
 

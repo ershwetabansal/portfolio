@@ -23,5 +23,8 @@ const app = new Vue({
     data : {
         data
     },
-    router
+    router,
+    components : {
+        sidebar : require('./components/Sidebar.vue')
+    }
 });
