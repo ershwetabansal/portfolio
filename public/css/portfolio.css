@@ -98,42 +98,62 @@ div#navbar::before {
   width: 100%; }
 
 .list-navigation {
-  margin-top: 3em;
-  text-align: left;
-  padding-left: 2em; }
-  .list-navigation li {
-    margin-bottom: 1em;
-    position: relative; }
-    .list-navigation li a {
-      color: #a9a4a4;
-      text-decoration: none; }
-      .list-navigation li a:hover, .list-navigation li a:focus, .list-navigation li a:active, .list-navigation li a.router-link-active {
-        color: white; }
-      .list-navigation li a.router-link-active::before {
-        content: " \f105 ";
-        padding-right: 1em;
-        font-family: FontAwesome; }
-      .list-navigation li a.router-link-active::after {
-        content: " ";
-        display: block;
-        position: absolute;
-        width: 0;
-        height: 0;
-        border-top: 9px solid transparent;
-        border-bottom: 9px solid transparent;
-        border-right: 8px solid #fff;
-        bottom: 6px;
-        left: auto;
-        right: 0; }
+  margin-top: 3em; }
+  @media (max-width: 767px) {
+    .list-navigation {
+      text-align: center; }
+      .list-navigation a {
+        color: #a9a4a4;
+        text-decoration: none; }
+        .list-navigation a.router-link-active {
+          color: white; } }
+  @media (min-width: 768px) {
+    .list-navigation {
+      padding-left: 2em;
+      text-align: left; }
+      .list-navigation li {
+        margin-bottom: 1em;
+        position: relative; }
+        .list-navigation li a {
+          color: #a9a4a4;
+          text-decoration: none; }
+          .list-navigation li a:hover, .list-navigation li a:focus, .list-navigation li a:active, .list-navigation li a.router-link-active {
+            color: white; }
+          .list-navigation li a.router-link-active::before {
+            content: " \f105 ";
+            padding-right: 1em;
+            font-family: FontAwesome; }
+          .list-navigation li a.router-link-active::after {
+            content: " ";
+            display: block;
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-top: 9px solid transparent;
+            border-bottom: 9px solid transparent;
+            border-right: 8px solid #fff;
+            bottom: 6px;
+            left: auto;
+            right: 0; } }
 
-.list-social-links {
-  text-align: left;
-  padding-left: 2em; }
+@media (max-width: 767px) {
+  .list-social-links {
+    text-align: center; } }
+
+@media (min-width: 768px) {
+  .list-social-links {
+    text-align: left;
+    padding-left: 2em; } }
+
+.list-social-links li {
+  margin-right: 10px; }
   .list-social-links li a {
     font-size: 1.5em;
     color: #a9a4a4; }
     .list-social-links li a:hover {
       color: white; }
+  .list-social-links li:last-of-type {
+    margin-right: 0; }
 
 #portfolio {
   position: relative; }

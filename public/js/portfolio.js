@@ -10971,7 +10971,7 @@
 	    value: true
 	});
 	var skills = {
-	    'Front-End Web development': ['<span>Javascript development with hands on experience of frameworks like <strong>Angular JS</strong> and \n         <strong>Bootstrap JS</strong>.</span>', '<span>Used <strong>VUE js</strong> in this porfolio website and using the same in my next venture.</span>', '<span>Can efficiently work with <strong>jQuery</strong> to create a quick working widgets.</span>', '<span>Nevertheless <strong>HTML5</strong> and <strong>CSS3</strong> are the basics and in love with \n        <strong>Sass</strong> for better management of styles.</span>', '<span>Full integration of front-end development using <strong>Gulp</strong>.</span>', '<span>Very much aware of the basic tools to ease the development - <strong>bower/npm/yarn</strong></span>', '<span><strong>Jasmine</strong> and <strong>Karma</strong> are the best friends for setting up unit tests.</span>', '<span>For e2e testing, I started with <strong>Protractor</strong> in Angular JS and now I use the same for non-angular applications too.</span>', '<span>I have an hands-on of mobile application development using <strong>Apache Cordova</strong> for a quick application \n        creation across multiple platforms.</span>', '<span>Getting good at <strong>photoshop</strong> for designing skills.</span>'],
+	    'Front-End Web development': ['<span>Javascript development with hands on experience of frameworks like <strong>Angular JS</strong> and \n         <strong>VUE JS</strong>.</span>', '<span>Can efficiently work with <strong>jQuery</strong> to create a quick working widgets.</span>', '<span>Nevertheless <strong>HTML5</strong> and <strong>CSS3</strong> and in love with \n        <strong>Sass</strong> for better management of styles.</span>', '<span>Full integration of front-end development using <strong>Gulp</strong>.</span>', '<span><strong>Jasmine</strong> and <strong>Karma</strong> are the best friends for setting up unit tests.</span>', '<span>For e2e testing, I started with <strong>Protractor</strong> in Angular JS and now I use the same for non-angular applications too.</span>', '<span>I have hands-on of mobile application development using <strong>Apache Cordova</strong> for a quick application \n        creation across multiple platforms.</span>', '<span>Getting good at <strong>photoshop</strong> for designing skills.</span>'],
 	    'Back-End Web development': ['<span>I have good experience in <strong>Laravel PHP</strong> and <strong>Eloquent</strong> to create the RESTful \n        API servers and use <strong>Blades</strong> for views based simple websites.</span>', '<span>Sometimes, for simple applications, I use <strong>NodeJS</strong> to \n        create the server, such as this Portfolio website.</span>', '<span>In few of the applications, I have used <strong>Enterprise Java</strong> with <strong>Spring Hibernate</strong> \n        frameworks on Tomcat server.</span>']
 	};
 
@@ -11334,7 +11334,8 @@
 	        staticClass: "col-md-4 col-md-offset-1"
 	      }, [(project.link) ? _c('a', {
 	        attrs: {
-	          "href": project.link
+	          "href": project.link,
+	          "target": "_blank"
 	        }
 	      }, [_c('img', {
 	        staticStyle: {
@@ -11472,7 +11473,8 @@
 	      }
 	    }, [_c('a', {
 	      attrs: {
-	        "href": contact.links
+	        "href": contact.link,
+	        "target": "_blank"
 	      }
 	    }, [_c('i', {
 	      staticClass: "fa",
@@ -11584,7 +11586,8 @@
 	  }, _vm._l((_vm.data.contacts), function(contact) {
 	    return _c('li', [_c('a', {
 	      attrs: {
-	        "href": contact.link
+	        "href": contact.link,
+	        "target": "_blank"
 	      }
 	    }, [_c('i', {
 	      staticClass: "fa",

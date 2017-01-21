@@ -13,7 +13,7 @@
                 {{ contact.text }}:
             </td>
             <td style="padding-bottom: 10px;">
-                <a :href="contact.links">
+                <a :href="contact.link" target="_blank">
                     <i class="fa" :class="contact.class"></i>
                     {{ contact.linkText }}
                 </a>

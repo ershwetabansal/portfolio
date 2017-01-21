@@ -4,7 +4,7 @@
             <ul class="intro_list">
                 <li v-for="item in data.intro">{{ item }}</li>
             </ul>
-            <a href="#about-me" style="font-size: 2em;margin-top: 4em; display: inline-block;">
+            <a href="#about-me" style="font-size: 2em;margin-top: 4em; display: inline-block;" target="_blank">
                 <i class="fa fa-angle-down"></i>
             </a>
         </div>

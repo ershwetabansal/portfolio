@@ -23,7 +23,7 @@
 
                     </div>
                     <div class="col-md-4 col-md-offset-1" v-if="project.mini_image">
-                        <a :href="project.link" v-if="project.link">
+                        <a :href="project.link" v-if="project.link" target="_blank">
                             <img :src="project.mini_image" :alt="project.title" style="width: 100%;"/>
                         </a>
 

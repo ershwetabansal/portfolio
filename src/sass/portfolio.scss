@@ -127,35 +127,48 @@ div#navbar::before {
 
 .list-navigation {
   margin-top: 3em;
-  text-align: left;
-  padding-left: 2em;
-  li {
-    margin-bottom: 1em;
-    position: relative;
+
+  @media (max-width: 767px) {
+    text-align: center;
     a {
       color: #a9a4a4;
       text-decoration: none;
-      &:hover, &:focus, &:active, &.router-link-active {
+      &.router-link-active {
         color: $sidebar-text-color;
       }
-      &.router-link-active {
-        &::before {
-          content: " \f105 ";
-          padding-right: 1em;
-          font-family: FontAwesome;
+    }
+  }
+  @media (min-width: 768px) {
+    padding-left: 2em;
+    text-align: left;
+    li {
+      margin-bottom: 1em;
+      position: relative;
+      a {
+        color: #a9a4a4;
+        text-decoration: none;
+        &:hover, &:focus, &:active, &.router-link-active {
+          color: $sidebar-text-color;
         }
-        &::after {
-          content: " ";
-          display: block;
-          position: absolute;
-          width: 0;
-          height: 0;
-          border-top: 9px solid transparent;
-          border-bottom: 9px solid transparent;
-          border-right: 8px solid #fff;
-          bottom: 6px;
-          left: auto;
-          right: 0;
+        &.router-link-active {
+          &::before {
+            content: " \f105 ";
+            padding-right: 1em;
+            font-family: FontAwesome;
+          }
+          &::after {
+            content: " ";
+            display: block;
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-top: 9px solid transparent;
+            border-bottom: 9px solid transparent;
+            border-right: 8px solid #fff;
+            bottom: 6px;
+            left: auto;
+            right: 0;
+          }
         }
       }
     }
@@ -163,9 +176,15 @@ div#navbar::before {
 }
 
 .list-social-links {
-  text-align: left;
-  padding-left: 2em;
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+  @media (min-width: 768px) {
+    text-align: left;
+    padding-left: 2em;
+  }
   li {
+    margin-right: 10px;
     a {
       font-size: 1.5em;
       color: #a9a4a4;
@@ -174,6 +193,9 @@ div#navbar::before {
       }
     }
 
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
 }
 

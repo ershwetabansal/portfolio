@@ -15,7 +15,7 @@
             </ul>
             <ul class="list-inline sticked-to-bottom full-width list-social-links">
                 <li v-for="contact in data.contacts">
-                    <a :href="contact.link">
+                    <a :href="contact.link" target="_blank">
                         <i class="fa" :class="contact.class"></i>
                     </a>
                 </li>

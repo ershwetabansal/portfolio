@@ -1,8 +1,7 @@
 let skills = {
     'Front-End Web development' : [
         `<span>Javascript development with hands on experience of frameworks like <strong>Angular JS</strong> and 
-         <strong>Bootstrap JS</strong>.</span>`,
-        `<span>Used <strong>VUE js</strong> in this porfolio website and using the same in my next venture.</span>`,
+         <strong>VUE JS</strong>.</span>`,
         '<span>Can efficiently work with <strong>jQuery</strong> to create a quick working widgets.</span>',
         `<span>Nevertheless <strong>HTML5</strong> and <strong>CSS3</strong> and in love with 
         <strong>Sass</strong> for better management of styles.</span>`,
