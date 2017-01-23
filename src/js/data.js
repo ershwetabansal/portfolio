@@ -233,7 +233,7 @@ let portfolio = {
 
 export default {
     name : 'Shweta Bansal',
-    title : 'Full-stack developer',
+    title : 'Full-stack web developer',
     profile_image : '/images/shweta_profile.jpg',
     headers : {
         'My skills' : '/about',
