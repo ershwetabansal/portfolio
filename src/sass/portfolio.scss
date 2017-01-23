@@ -11,18 +11,21 @@ h1 {
   font-size: 1.8em;
   text-transform: uppercase;
   margin-top: 0;
+  line-height: 1.9em;
 }
 
 h2 {
   font-size: 1.5em;
   text-transform: uppercase;
   margin-top: 0;
+  line-height: 1.7em;
 }
 
 h3 {
   font-size: 1.1em;
   text-transform: uppercase;
   margin-top: 0;
+  line-height: 1.2em;
 
 }
 .overlay {
@@ -97,7 +100,12 @@ div#navbar::before {
   }
   overflow-x: hidden;
   > div {
-    padding: 3em;
+    @media (min-width: 768px) {
+      padding: 3em;
+    }
+    @media (max-width: 767px) {
+      padding: 2em;
+    }
   }
 }
 
@@ -243,7 +251,7 @@ div#navbar::before {
 }
 
 .link {
-  color: $text-color;
+  color: #337ab7;
 }
 
 .list-skills {
@@ -282,4 +290,8 @@ div#navbar::before {
     display: none;
   }
 
+}
+
+.text-unbreakable {
+  white-space: nowrap;
 }

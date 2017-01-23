@@ -5,17 +5,20 @@ body {
 h1 {
   font-size: 1.8em;
   text-transform: uppercase;
-  margin-top: 0; }
+  margin-top: 0;
+  line-height: 1.9em; }
 
 h2 {
   font-size: 1.5em;
   text-transform: uppercase;
-  margin-top: 0; }
+  margin-top: 0;
+  line-height: 1.7em; }
 
 h3 {
   font-size: 1.1em;
   text-transform: uppercase;
-  margin-top: 0; }
+  margin-top: 0;
+  line-height: 1.2em; }
 
 .overlay {
   background: black;
@@ -74,8 +77,12 @@ div#navbar::before {
       background: #fafafa;
       padding-left: 25%;
       min-height: 100vh; } }
-  #content > div {
-    padding: 3em; }
+  @media (min-width: 768px) {
+    #content > div {
+      padding: 3em; } }
+  @media (max-width: 767px) {
+    #content > div {
+      padding: 2em; } }
 
 .profile-image {
   width: 150px;
@@ -217,3 +224,6 @@ div#navbar::before {
 
 .collapsed .less {
   display: none; }
+
+.text-unbreakable {
+  white-space: nowrap; }

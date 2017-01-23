@@ -11083,7 +11083,7 @@
 
 	exports.default = {
 	    name: 'Shweta Bansal',
-	    title: 'Full-stack developer',
+	    title: 'Full-stack web developer',
 	    profile_image: '/images/shweta_profile.jpg',
 	    headers: {
 	        'My skills': '/about',
@@ -11313,18 +11313,18 @@
 	        staticClass: "row"
 	      }, [_c('div', {
 	        staticClass: "col-md-7"
-	      }, [_c('h3', [_vm._v(_vm._s(project.title) + "\n                        "), (project.link) ? _c('a', {
+	      }, [_c('h3', [(project.link) ? _c('a', {
 	        staticClass: "link",
 	        attrs: {
 	          "href": project.link,
 	          "target": "_blank"
 	        }
-	      }, [_c('i', {
+	      }, [_vm._v("\n                            " + _vm._s(project.title) + "\n                            "), _c('i', {
 	        staticClass: "fa fa-link",
 	        attrs: {
 	          "aria-hidden": "true"
 	        }
-	      })]) : _vm._e()]), _vm._v(" "), _vm._l((project.about), function(text) {
+	      })]) : _c('span', [_vm._v(_vm._s(project.title))])]), _vm._v(" "), _vm._l((project.about), function(text) {
 	        return _c('p', [_vm._v("\n                        " + _vm._s(text) + "\n                    ")])
 	      }), _vm._v(" "), _c('ul', {
 	        staticClass: "list-inline list-tech-tags"
@@ -11472,6 +11472,7 @@
 	        "padding-bottom": "10px"
 	      }
 	    }, [_c('a', {
+	      staticClass: "text-unbreakable",
 	      attrs: {
 	        "href": contact.link,
 	        "target": "_blank"

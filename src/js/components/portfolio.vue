@@ -8,10 +8,12 @@
             <div v-for="project in company_details.projects" class="project-details">
                 <div class="row">
                     <div class="col-md-7">
-                        <h3>{{ project.title }}
+                        <h3>
                             <a :href="project.link" v-if="project.link" target="_blank" class="link">
+                                {{ project.title }}
                                 <i class="fa fa-link" aria-hidden="true"></i>
                             </a>
+                            <span v-else>{{ project.title }}</span>
                         </h3>
                         <p v-for="text in project.about">
                             {{ text }}
