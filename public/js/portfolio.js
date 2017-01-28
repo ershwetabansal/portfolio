@@ -11010,9 +11010,9 @@
 	            target: '#ea-ptw',
 	            title: 'Published this week summary e-mail application',
 	            about: ['As we publish many reports and e-mail alerts each week, we needed a way to \n                send a summary e-mail to the clients every Friday.', 'So an application was required to create this e-mail automatically which would pull in the publications\n                in that week. And arrange them in a defined manner and send out the e-mail on a given time.', 'It was essential to have a user interface so that anyone can make changes in the reports order \n                    or edit the text if required. Also to add an introductory text for the upcoming events etc.', 'Litmus was used to test the generated e-mail on all the e-mail clients.'],
-	            mini_image: '/images/portfolio/e-mail-design.png',
+	            mini_image: '/images/portfolio/published_this_week.png',
 	            tech: ['HTML5', 'CSS3', 'Jquery', 'Bootstrap', 'Litmus', 'Gulp', 'Jasmine', 'Karma', 'Laravel PHP', 'Blade', 'Eloquent'],
-	            images: ['/images/portfolio/e-mail-design.png']
+	            images: ['/images/portfolio/e-mail-design.png', '/images/portfolio/published_this_week.png']
 	        }, {
 	            id: 'disk-browser',
 	            title: 'Disk browser / File Manager',
@@ -11339,7 +11339,8 @@
 	        }
 	      }, [_c('img', {
 	        staticStyle: {
-	          "width": "100%"
+	          "width": "100%",
+	          "border": "1px solid #dedede"
 	        },
 	        attrs: {
 	          "src": project.mini_image,
@@ -11347,7 +11348,8 @@
 	        }
 	      })]) : _vm._e(), _vm._v(" "), (!project.link) ? _c('img', {
 	        staticStyle: {
-	          "width": "100%"
+	          "width": "100%",
+	          "border": "1px solid #dedede"
 	        },
 	        attrs: {
 	          "src": project.mini_image,

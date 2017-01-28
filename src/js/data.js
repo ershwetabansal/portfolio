@@ -98,9 +98,9 @@ let portfolio = {
                     or edit the text if required. Also to add an introductory text for the upcoming events etc.`,
                     `Litmus was used to test the generated e-mail on all the e-mail clients.`
                 ],
-                mini_image : '/images/portfolio/e-mail-design.png',
+                mini_image : '/images/portfolio/published_this_week.png',
                 tech: ['HTML5', 'CSS3','Jquery', 'Bootstrap', 'Litmus','Gulp', 'Jasmine', 'Karma', 'Laravel PHP', 'Blade', 'Eloquent'],
-                images :['/images/portfolio/e-mail-design.png']
+                images :['/images/portfolio/e-mail-design.png', '/images/portfolio/published_this_week.png']
             },
             {
                 id : 'disk-browser',

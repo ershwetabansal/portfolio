@@ -26,10 +26,11 @@
                     </div>
                     <div class="col-md-4 col-md-offset-1" v-if="project.mini_image">
                         <a :href="project.link" v-if="project.link" target="_blank">
-                            <img :src="project.mini_image" :alt="project.title" style="width: 100%;"/>
+                            <img :src="project.mini_image" :alt="project.title" 
+                            style="width: 100%;border: 1px solid #dedede;"/>
                         </a>
 
-                        <img :src="project.mini_image" :alt="project.title" style="width: 100%;" v-if="!project.link"/>
+                        <img :src="project.mini_image" :alt="project.title" style="width: 100%;border: 1px solid #dedede;" v-if="!project.link"/>
 
                     </div>
                 </div>
