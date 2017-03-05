@@ -39,6 +39,9 @@ h3 {
   text-align: center;
   h3 {
     color: #a9a4a4;
+    @media (min-width: 1200px) {
+      margin-bottom: 10em;
+    }
   }
   #navbar, .overlay {
     position: absolute;
@@ -78,6 +81,10 @@ h3 {
     left: 0;
     top: 0;
     overflow-x: hidden;
+  }
+  @media (max-width: 767px) {
+    height: 48vh;
+    overflow: hidden;
   }
 }
 
@@ -150,7 +157,7 @@ div#navbar::before {
     padding-left: 2em;
     text-align: left;
     li {
-      margin-bottom: 1em;
+      margin-bottom: 2em;
       position: relative;
       a {
         color: #a9a4a4;
@@ -178,6 +185,9 @@ div#navbar::before {
             right: 0;
           }
         }
+        @media (min-width: 1200px) {
+          font-size: 1.7em;
+        }
       }
     }
   }
@@ -192,7 +202,7 @@ div#navbar::before {
     padding-left: 2em;
   }
   li {
-    margin-right: 10px;
+    margin-right: 50px;
     a {
       font-size: 1.5em;
       color: #a9a4a4;
