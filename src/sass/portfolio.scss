@@ -87,11 +87,13 @@ h3 {
     top: 0;
     overflow-x: hidden;
   }
-  @media (max-width: 991px) {
+  @media (max-width: 767px) {
     height: 48vh;
+    min-height: 294px;
     overflow: hidden;
   }
-  @media (min-width: 992px) and (max-width: 1199px) {
+  @media (min-width: 768px) and (max-width: 1199px) {
+    min-height: 438px;
     height: 39vh;
     overflow: hidden;
   }

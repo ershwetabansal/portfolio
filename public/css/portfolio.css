@@ -66,12 +66,14 @@ h3 {
         top: 0;
         left: 0;
         height: 100%; } }
-  @media (max-width: 991px) {
+  @media (max-width: 767px) {
     .sidebar {
       height: 48vh;
+      min-height: 294px;
       overflow: hidden; } }
-  @media (min-width: 992px) and (max-width: 1199px) {
+  @media (min-width: 768px) and (max-width: 1199px) {
     .sidebar {
+      min-height: 438px;
       height: 39vh;
       overflow: hidden; } }
 
