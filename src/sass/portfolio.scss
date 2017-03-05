@@ -37,10 +37,14 @@ h3 {
   position: relative;
   color: $sidebar-text-color;
   text-align: center;
+  h1 {
+    margin-bottom: 0;
+  }
   h3 {
     color: #a9a4a4;
     @media (min-width: 1200px) {
-      margin-bottom: 10em;
+      border-bottom: 1px solid #183148;
+      padding-bottom: 7px;
     }
   }
   #navbar, .overlay {
@@ -59,14 +63,19 @@ h3 {
     .profile-image {
       display: none;
     }
+  }
+  @media (max-width: 1199px) {
     .list-navigation {
       li {
         display: inline-block;
-        padding-right: 20px;
+        margin-right: 4vw;
+        &:last-of-type {
+          margin-right: 0;
+        }
       }
     }
   }
-  @media (min-width:768px) {
+  @media (min-width:1200px) {
     > img {
       position: absolute;
       z-index: 0;
@@ -82,8 +91,12 @@ h3 {
     top: 0;
     overflow-x: hidden;
   }
-  @media (max-width: 767px) {
+  @media (max-width: 991px) {
     height: 48vh;
+    overflow: hidden;
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    height: 39vh;
     overflow: hidden;
   }
 }
@@ -100,17 +113,17 @@ div#navbar::before {
 }
 
 #content {
-  @media (min-width: 768px) {
+  @media (min-width: 1200px) {
     background: #fafafa;
     padding-left: $sidebar-width;
     min-height: 100vh;
   }
   overflow-x: hidden;
   > div {
-    @media (min-width: 768px) {
+    @media (min-width: 1200px) {
       padding: 3em;
     }
-    @media (max-width: 767px) {
+    @media (max-width: 1199px) {
       padding: 2em;
     }
   }
@@ -120,7 +133,6 @@ div#navbar::before {
   width: 150px;
   height: 180px;
   margin: 0 auto;
-  margin-bottom: 2em;
   img, &img {
     width: 150px;
     height: 180px;
@@ -141,19 +153,27 @@ div#navbar::before {
 }
 
 .list-navigation {
-  margin-top: 3em;
+  margin-top: 5vh;
 
   @media (max-width: 767px) {
+    margin-top: 9vh;
+  }
+  a {
+    padding: 10px;
+  }
+  @media (max-width: 1199px) {
     text-align: center;
     a {
       color: #a9a4a4;
       text-decoration: none;
+      font-size: 1.4em;
       &.router-link-active {
+        border: 1px solid;
         color: $sidebar-text-color;
       }
     }
   }
-  @media (min-width: 768px) {
+  @media (min-width: 1200px) {
     padding-left: 2em;
     text-align: left;
     li {
@@ -166,11 +186,11 @@ div#navbar::before {
           color: $sidebar-text-color;
         }
         &.router-link-active {
-          &::before {
-            content: " \f105 ";
-            padding-right: 1em;
-            font-family: FontAwesome;
-          }
+          //&::after {
+          //  content: " \f105 ";
+          //  padding-right: 1em;
+          //  font-family: FontAwesome;
+          //}
           &::after {
             content: " ";
             display: block;
@@ -186,7 +206,7 @@ div#navbar::before {
           }
         }
         @media (min-width: 1200px) {
-          font-size: 1.7em;
+          font-size: 1.4em;
         }
       }
     }
@@ -194,12 +214,8 @@ div#navbar::before {
 }
 
 .list-social-links {
-  @media (max-width: 767px) {
+  @media (max-width: 1199px) {
     text-align: center;
-  }
-  @media (min-width: 768px) {
-    text-align: left;
-    padding-left: 2em;
   }
   li {
     margin-right: 50px;
