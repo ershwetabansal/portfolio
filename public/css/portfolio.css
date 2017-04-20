@@ -21,8 +21,10 @@ h3 {
   line-height: 1.1em; }
 
 .overlay {
-  background: black;
   opacity: 0.7; }
+  @media (min-width: 768px) {
+    .overlay {
+      background: black; } }
 
 .sidebar {
   position: relative;
@@ -107,7 +109,7 @@ div#navbar::before {
   .profile-image img, .profile-imageimg {
     width: 150px;
     height: 180px;
-    border: 3px solid #afadad;
+    border: 3px solid #777538;
     padding: 2px;
     border-radius: 50%; }
 
@@ -167,11 +169,12 @@ div#navbar::before {
           font-size: 1.4em; } }
 
 .list-social-links {
-  border-top: 6px solid #183148;
+  border-top: 6px solid #271d10;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #0c1825;
-  margin-bottom: 0; }
+  background-color: #010000;
+  margin-bottom: 0;
+  margin-left: 1px; }
   @media (max-width: 1199px) {
     .list-social-links {
       text-align: center; } }
