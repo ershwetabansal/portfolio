@@ -37,13 +37,13 @@ h3 {
   position: relative;
   color: $sidebar-text-color;
   text-align: center;
+  background-color: #0c1825;
   h1 {
     margin-bottom: 0;
   }
   h3 {
     color: #a9a4a4;
     @media (min-width: 1200px) {
-      border-bottom: 6px solid #183148;
       padding-bottom: 15px;
     }
   }
@@ -85,7 +85,7 @@ h3 {
     height: 100vh;
     left: 0;
     top: 0;
-    overflow-x: hidden;
+    overflow: hidden;
   }
   @media (max-width: 767px) {
     height: 48vh;
@@ -117,7 +117,7 @@ div#navbar::before {
     min-height: 100vh;
   }
   overflow-x: hidden;
-  > div {
+  section {
     @media (min-width: 1200px) {
       padding: 3em;
     }
@@ -215,6 +215,9 @@ div#navbar::before {
 .list-social-links {
   border-top: 6px solid #183148;
   padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #0c1825;
+  margin-bottom: 0;
   @media (max-width: 1199px) {
     text-align: center;
   }

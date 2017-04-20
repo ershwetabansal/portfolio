@@ -15,11 +15,9 @@
 
     <sidebar :data="data"></sidebar>
 
-    <div id="content">
-        <div>
-            <router-view :data="data"></router-view>
-        </div>
-    </div>
+    <article id="content">
+        <router-view :data="data"></router-view>
+    </article>
 
 </div>
 

@@ -27,14 +27,14 @@ h3 {
 .sidebar {
   position: relative;
   color: white;
-  text-align: center; }
+  text-align: center;
+  background-color: #0c1825; }
   .sidebar h1 {
     margin-bottom: 0; }
   .sidebar h3 {
     color: #a9a4a4; }
     @media (min-width: 1200px) {
       .sidebar h3 {
-        border-bottom: 6px solid #183148;
         padding-bottom: 15px; } }
   .sidebar #navbar, .sidebar .overlay {
     position: absolute;
@@ -59,7 +59,7 @@ h3 {
       height: 100vh;
       left: 0;
       top: 0;
-      overflow-x: hidden; }
+      overflow: hidden; }
       .sidebar > img {
         position: absolute;
         z-index: 0;
@@ -94,10 +94,10 @@ div#navbar::before {
       padding-left: 25%;
       min-height: 100vh; } }
   @media (min-width: 1200px) {
-    #content > div {
+    #content section {
       padding: 3em; } }
   @media (max-width: 1199px) {
-    #content > div {
+    #content section {
       padding: 2em; } }
 
 .profile-image {
@@ -168,7 +168,10 @@ div#navbar::before {
 
 .list-social-links {
   border-top: 6px solid #183148;
-  padding-top: 10px; }
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #0c1825;
+  margin-bottom: 0; }
   @media (max-width: 1199px) {
     .list-social-links {
       text-align: center; } }
