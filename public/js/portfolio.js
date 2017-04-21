@@ -11140,19 +11140,13 @@
 	          "target": "_blank"
 	        }
 	      }, [_c('img', {
-	        staticStyle: {
-	          "width": "100%",
-	          "border": "1px solid #dedede"
-	        },
+	        staticClass: "snapshot",
 	        attrs: {
 	          "src": project.mini_image,
 	          "alt": project.title
 	        }
 	      })]) : _vm._e(), _vm._v(" "), (!project.link) ? _c('img', {
-	        staticStyle: {
-	          "width": "100%",
-	          "border": "1px solid #dedede"
-	        },
+	        staticClass: "snapshot",
 	        attrs: {
 	          "src": project.mini_image,
 	          "alt": project.title
