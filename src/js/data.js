@@ -1,16 +1,14 @@
 let skills = {
     'Front-End Web development' : [
-        `<span>Javascript development with hands on experience of frameworks like <strong>Angular JS</strong> and 
+        `<span>JavaScript development with hands on experience of frameworks like <strong>Angular JS</strong> and 
          <strong>VUE JS</strong>.</span>`,
         '<span>Can efficiently work with <strong>jQuery</strong> to create a quick working widgets.</span>',
-        `<span>Nevertheless <strong>HTML5</strong> and <strong>CSS3</strong> and in love with 
-        <strong>Sass</strong> for better management of styles.</span>`,
-        '<span>Full integration of front-end development using <strong>Gulp</strong>.</span>',
-        '<span><strong>Jasmine</strong> and <strong>Karma</strong> are the best friends for setting up unit tests.</span>',
-        '<span>For e2e testing, I started with <strong>Protractor</strong> in Angular JS and now I use the same for non-angular applications too.</span>',
-        `<span>I have hands-on of mobile application development using <strong>Apache Cordova</strong> for a quick application 
-        creation across multiple platforms.</span>`,
-        `<span>Getting good at <strong>photoshop</strong> for designing skills.</span>`
+        `<span>Nevertheless <strong>HTML5</strong> and <strong>CSS3</strong> are the strong skills and in love with 
+        <strong>Sass</strong> for better management of css.</span>`,
+        '<span>Have good understanding of build tools required in front-end development like <strong>NPM</strong>, <strong>Gulp</strong>, <strong>Webpack</strong>, <strong>Bower</strong> etc.</span>',
+        '<span>I prefer to use <strong>Jasmine</strong> and <strong>Karma</strong> for unit tests.</span>',
+        '<span>Can efficiently write e2e tests using <strong>Protractor</strong>.</span>',
+        `<span>Getting good at <strong>photoshop</strong> for design skills.</span>`
     ],
     'Back-End Web development' : [
         `<span>I have good experience in <strong>Laravel PHP</strong> and <strong>Eloquent</strong> to create the RESTful 
@@ -18,7 +16,7 @@ let skills = {
         `<span>Sometimes, for simple applications, I use <strong>NodeJS</strong> to 
         create the server, such as this Portfolio website.</span>`,
         `<span>In few of the applications, I have used <strong>Enterprise Java</strong> with <strong>Spring Hibernate</strong> 
-        frameworks on Tomcat server.</span>`
+        framework.</span>`
     ]
 };
 
@@ -47,7 +45,7 @@ let portfolio = {
             website for easier and faster content management.`
 
                 ],
-                tech: ['HTML5', 'CSS3', 'Javascript', 'Jquery','Gulp', 'Jasmine', 'Karma','Laravel PHP','Blade', 'Eloquent' ],
+                tech: ['HTML5', 'CSS3', 'JavaScript', 'Jquery','Gulp', 'Jasmine', 'Karma','Laravel PHP','Blade', 'Eloquent' ],
                 mini_image : '/images/portfolio/energy_aspects_front_page.png',
                 images :[
                     '/images/portfolio/energy_aspects.png',
@@ -111,12 +109,12 @@ let portfolio = {
                     package.`,
                     `Disk can be a folder maintained on the server or AWS disk or any other shared disks which can be 
                     connected through some APIs.`,
-                    `Client plugin is written using Javascript and browserify. Server plugin is available for Node and
+                    `Client plugin is written using JavaScript and browserify. Server plugin is available for Node and
                     Laravel PHP.`
                 ],
                 mini_image : '/images/portfolio/disk-browser.png',
                 link : 'https://github.com/ershwetabansal/disk-browser',
-                tech : ['HTML5', 'CSS3', 'Bootstrap', 'Javascript', 'Browserify', 'Node JS', 'EXPRESS JS', 'LARAVEL PHP'],
+                tech : ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript', 'Browserify', 'Node JS', 'EXPRESS JS', 'LARAVEL PHP'],
                 images : ['/images/portfolio/disk-browser.png']
 
             }
@@ -195,7 +193,7 @@ let portfolio = {
                     'I was working in the personal insurance side of the business and had been working on the enhancements' +
                     'for their website and some of the internal applications.'
                 ],
-                tech: ['HTML5', 'CSS3', 'Javascript', 'JQUERY'],
+                tech: ['HTML5', 'CSS3', 'JavaScript', 'JQUERY'],
                 images : []
             }
         ]
@@ -241,12 +239,12 @@ export default {
         'Contact' : '/contact'
     },
     intro: [
-        'HTML', 'CSS', 'Javascript', 'Design', 'Web performance', 'Laravel PHP', 'Node JS/Express JS'
+        'HTML', 'CSS', 'JavaScript', 'Design', 'Web performance', 'Laravel PHP', 'Node JS/Express JS'
     ],
     about: [
         `I am a full stack developer with wide experience in front end and back end technologies.`,
         `I am looking forward to developing and exercising years of knowledge on challenging projects and applications. 
-         I have a problem solving approach and appreciates clean and readable code. 
+         I have a problem solving approach and appreciate clean and readable code. 
          I am always enthusiastic for learning new technologies and frameworks. I strongly vouch for test driven development.`
     ],
     skills : skills,

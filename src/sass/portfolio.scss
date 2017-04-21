@@ -5,6 +5,7 @@ $text-color: #a9a4a4;
 body {
   font: 16px/1.6 Roboto,Helvetica,sans-serif;
   font-weight: 300;
+  color: #352716;
 }
 
 h1 {
@@ -266,6 +267,9 @@ div#navbar::before {
 .project-details {
   margin-top: 2em;
   margin-bottom: 4em;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 .list-tech-tags {
@@ -273,7 +277,7 @@ div#navbar::before {
   margin-bottom: 2em;
   margin-left: 0;
   li {
-    background-color: rgba(10, 98, 142, 0.8);
+    background-color: #8a6d3b;
     margin-bottom: 6px;
     color: #FFF;
     padding: 4px 10px;
@@ -283,8 +287,11 @@ div#navbar::before {
   }
 }
 
-.link {
-  color: #337ab7;
+a {
+  color: #b97f1b;
+  &:focus, &:hover {
+    color: #b97f1b;
+  }
 }
 
 .list-skills {
@@ -299,11 +306,11 @@ div#navbar::before {
     }
   }
   strong {
-    color: rgba(10, 98, 142, 0.8);
+    color: #8c6117;
   }
 
   h3 {
-    color: rgba(4, 51, 74, 0.8);
+    color: #8c6117;
     margin-bottom: 20px;
   }
 }

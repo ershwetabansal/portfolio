@@ -10773,8 +10773,8 @@
 	    value: true
 	});
 	var skills = {
-	    'Front-End Web development': ['<span>Javascript development with hands on experience of frameworks like <strong>Angular JS</strong> and \n         <strong>VUE JS</strong>.</span>', '<span>Can efficiently work with <strong>jQuery</strong> to create a quick working widgets.</span>', '<span>Nevertheless <strong>HTML5</strong> and <strong>CSS3</strong> and in love with \n        <strong>Sass</strong> for better management of styles.</span>', '<span>Full integration of front-end development using <strong>Gulp</strong>.</span>', '<span><strong>Jasmine</strong> and <strong>Karma</strong> are the best friends for setting up unit tests.</span>', '<span>For e2e testing, I started with <strong>Protractor</strong> in Angular JS and now I use the same for non-angular applications too.</span>', '<span>I have hands-on of mobile application development using <strong>Apache Cordova</strong> for a quick application \n        creation across multiple platforms.</span>', '<span>Getting good at <strong>photoshop</strong> for designing skills.</span>'],
-	    'Back-End Web development': ['<span>I have good experience in <strong>Laravel PHP</strong> and <strong>Eloquent</strong> to create the RESTful \n        API servers and use <strong>Blades</strong> for views based simple websites.</span>', '<span>Sometimes, for simple applications, I use <strong>NodeJS</strong> to \n        create the server, such as this Portfolio website.</span>', '<span>In few of the applications, I have used <strong>Enterprise Java</strong> with <strong>Spring Hibernate</strong> \n        frameworks on Tomcat server.</span>']
+	    'Front-End Web development': ['<span>JavaScript development with hands on experience of frameworks like <strong>Angular JS</strong> and \n         <strong>VUE JS</strong>.</span>', '<span>Can efficiently work with <strong>jQuery</strong> to create a quick working widgets.</span>', '<span>Nevertheless <strong>HTML5</strong> and <strong>CSS3</strong> are the strong skills and in love with \n        <strong>Sass</strong> for better management of css.</span>', '<span>Have good understanding of build tools required in front-end development like <strong>NPM</strong>, <strong>Gulp</strong>, <strong>Webpack</strong>, <strong>Bower</strong> etc.</span>', '<span>I prefer to use <strong>Jasmine</strong> and <strong>Karma</strong> for unit tests.</span>', '<span>Can efficiently write e2e tests using <strong>Protractor</strong>.</span>', '<span>Getting good at <strong>photoshop</strong> for design skills.</span>'],
+	    'Back-End Web development': ['<span>I have good experience in <strong>Laravel PHP</strong> and <strong>Eloquent</strong> to create the RESTful \n        API servers and use <strong>Blades</strong> for views based simple websites.</span>', '<span>Sometimes, for simple applications, I use <strong>NodeJS</strong> to \n        create the server, such as this Portfolio website.</span>', '<span>In few of the applications, I have used <strong>Enterprise Java</strong> with <strong>Spring Hibernate</strong> \n        framework.</span>']
 	};
 
 	var portfolio = {
@@ -10788,7 +10788,7 @@
 	            title: 'Energy Aspects website',
 	            link: 'https://www.energyaspects.com',
 	            about: ['Energy Aspects publishes reports and provides data services \n                    on Crude oil, Natural gas, emissions and LPG/NGL market. \n                    All the reports are present and maintained on the website for clients access.', 'While working on modernization of legacy website, I introduced comprehensive inline editing on the\n            website for easier and faster content management.'],
-	            tech: ['HTML5', 'CSS3', 'Javascript', 'Jquery', 'Gulp', 'Jasmine', 'Karma', 'Laravel PHP', 'Blade', 'Eloquent'],
+	            tech: ['HTML5', 'CSS3', 'JavaScript', 'Jquery', 'Gulp', 'Jasmine', 'Karma', 'Laravel PHP', 'Blade', 'Eloquent'],
 	            mini_image: '/images/portfolio/energy_aspects_front_page.png',
 	            images: ['/images/portfolio/energy_aspects.png', '/images/portfolio/ea_mobile_1.png', '/images/portfolio/ea_mobile_2.png']
 	        }, {
@@ -10819,10 +10819,10 @@
 	            id: 'disk-browser',
 	            title: 'Disk browser / File Manager',
 	            target: '#disk-browser',
-	            about: ['Disk browser helps in managing files and directories on a disk. This has been created as an open source\n                    package.', 'Disk can be a folder maintained on the server or AWS disk or any other shared disks which can be \n                    connected through some APIs.', 'Client plugin is written using Javascript and browserify. Server plugin is available for Node and\n                    Laravel PHP.'],
+	            about: ['Disk browser helps in managing files and directories on a disk. This has been created as an open source\n                    package.', 'Disk can be a folder maintained on the server or AWS disk or any other shared disks which can be \n                    connected through some APIs.', 'Client plugin is written using JavaScript and browserify. Server plugin is available for Node and\n                    Laravel PHP.'],
 	            mini_image: '/images/portfolio/disk-browser.png',
 	            link: 'https://github.com/ershwetabansal/disk-browser',
-	            tech: ['HTML5', 'CSS3', 'Bootstrap', 'Javascript', 'Browserify', 'Node JS', 'EXPRESS JS', 'LARAVEL PHP'],
+	            tech: ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript', 'Browserify', 'Node JS', 'EXPRESS JS', 'LARAVEL PHP'],
 	            images: ['/images/portfolio/disk-browser.png']
 
 	        }]
@@ -10862,7 +10862,7 @@
 	            target: '#travelers',
 	            title: 'Policy issuance website for Travelers',
 	            about: ['Travelers is a United states based insurance company. I was working in Travelers as a vendor from\n                    L&T Infotech.', 'I was working in the personal insurance side of the business and had been working on the enhancements' + 'for their website and some of the internal applications.'],
-	            tech: ['HTML5', 'CSS3', 'Javascript', 'JQUERY'],
+	            tech: ['HTML5', 'CSS3', 'JavaScript', 'JQUERY'],
 	            images: []
 	        }]
 	    },
@@ -10892,8 +10892,8 @@
 	        'Portfolio': '/portfolio',
 	        'Contact': '/contact'
 	    },
-	    intro: ['HTML', 'CSS', 'Javascript', 'Design', 'Web performance', 'Laravel PHP', 'Node JS/Express JS'],
-	    about: ['I am a full stack developer with wide experience in front end and back end technologies.', 'I am looking forward to developing and exercising years of knowledge on challenging projects and applications. \n         I have a problem solving approach and appreciates clean and readable code. \n         I am always enthusiastic for learning new technologies and frameworks. I strongly vouch for test driven development.'],
+	    intro: ['HTML', 'CSS', 'JavaScript', 'Design', 'Web performance', 'Laravel PHP', 'Node JS/Express JS'],
+	    about: ['I am a full stack developer with wide experience in front end and back end technologies.', 'I am looking forward to developing and exercising years of knowledge on challenging projects and applications. \n         I have a problem solving approach and appreciate clean and readable code. \n         I am always enthusiastic for learning new technologies and frameworks. I strongly vouch for test driven development.'],
 	    skills: skills,
 	    portfolio_paragraph: ['I have developed various projects in my career which diversify from websites to B2E web applications to hybrid mobile applications.', 'Here are some of the snapshots of my work.'],
 	    portfolio: portfolio,
@@ -11157,35 +11157,7 @@
 	          "src": project.mini_image,
 	          "alt": project.title
 	        }
-	      }) : _vm._e()]) : _vm._e()]), _vm._v(" "), (project.images && project.images.length > 0) ? _c('div', [_c('a', {
-	        staticClass: "collapsed",
-	        staticStyle: {
-	          "cursor": "pointer"
-	        },
-	        attrs: {
-	          "data-toggle": "collapse",
-	          "data-target": project.target,
-	          "aria-expanded": "false"
-	        }
-	      }, [_c('span', {
-	        staticClass: "more"
-	      }, [_vm._v("See more ...")]), _vm._v(" "), _c('span', {
-	        staticClass: "less"
-	      }, [_vm._v("See less...")])]), _vm._v(" "), _c('div', {
-	        staticClass: "collapse",
-	        attrs: {
-	          "id": project.id
-	        }
-	      }, [_c('div', {
-	        staticClass: "images"
-	      }, _vm._l((project.images), function(source) {
-	        return _c('img', {
-	          attrs: {
-	            "src": source,
-	            "alt": project.title
-	          }
-	        })
-	      }))])]) : _vm._e()])
+	      }) : _vm._e()]) : _vm._e()])])
 	    })], 2)
 	  }))
 	},staticRenderFns: []}

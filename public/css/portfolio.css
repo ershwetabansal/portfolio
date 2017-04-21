@@ -1,6 +1,7 @@
 body {
   font: 16px/1.6 Roboto,Helvetica,sans-serif;
-  font-weight: 300; }
+  font-weight: 300;
+  color: #352716; }
 
 h1 {
   font-size: 1.8em;
@@ -208,13 +209,15 @@ div#navbar::before {
 .project-details {
   margin-top: 2em;
   margin-bottom: 4em; }
+  .project-details:last-of-type {
+    margin-bottom: 0; }
 
 .list-tech-tags {
   margin-top: 2em;
   margin-bottom: 2em;
   margin-left: 0; }
   .list-tech-tags li {
-    background-color: rgba(10, 98, 142, 0.8);
+    background-color: #8a6d3b;
     margin-bottom: 6px;
     color: #FFF;
     padding: 4px 10px;
@@ -222,8 +225,10 @@ div#navbar::before {
     margin-right: 6px;
     text-transform: uppercase; }
 
-.link {
-  color: #337ab7; }
+a {
+  color: #b97f1b; }
+  a:focus, a:hover {
+    color: #b97f1b; }
 
 .list-skills {
   margin-top: 2em; }
@@ -234,9 +239,9 @@ div#navbar::before {
       .list-skills > li ul li {
         line-height: 35px; }
   .list-skills strong {
-    color: rgba(10, 98, 142, 0.8); }
+    color: #8c6117; }
   .list-skills h3 {
-    color: rgba(4, 51, 74, 0.8);
+    color: #8c6117;
     margin-bottom: 20px; }
 
 .more {

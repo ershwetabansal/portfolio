@@ -34,18 +34,18 @@
 
                     </div>
                 </div>
-                <div v-if="project.images && project.images.length > 0">
-                    <a data-toggle="collapse" style="cursor: pointer;"
-                       :data-target="project.target" aria-expanded="false" class="collapsed">
-                        <span class="more">See more ...</span>
-                        <span class="less">See less...</span>
-                    </a>
-                    <div class="collapse" :id="project.id">
-                        <div class="images">
-                            <img :src="source" :alt="project.title" v-for="source in project.images">
-                        </div>
-                    </div>
-                </div>
+                <!--<div v-if="project.images && project.images.length > 0">-->
+                    <!--<a data-toggle="collapse" style="cursor: pointer;"-->
+                       <!--:data-target="project.target" aria-expanded="false" class="collapsed">-->
+                        <!--<span class="more">See more ...</span>-->
+                        <!--<span class="less">See less...</span>-->
+                    <!--</a>-->
+                    <!--<div class="collapse" :id="project.id">-->
+                        <!--<div class="images">-->
+                            <!--<img :src="source" :alt="project.title" v-for="source in project.images">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
             </div>
         </div>
     </section>
